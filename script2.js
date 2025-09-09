@@ -24,4 +24,17 @@ const squadreDiCalcio = [
 
 
 ]
+//funzione per generare numeri casuali
+function generaNumeroRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
+for (let i = 0; i<squadreDiCalcio.length; i++) {
+    const squadraCorrente = squadreDiCalcio[i];
+
+    squadraCorrente.puntiFatti = generaNumeroRandom(10, 100);
+    squadraCorrente.falliSubiti = generaNumeroRandom(50,500);
+
+}
+console.log("Array aggiornato con il ciclo for:");
+console.log(squadreDiCalcio);
